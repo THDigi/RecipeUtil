@@ -1,0 +1,15 @@
+An utility class for comparing recipes from Bukkit API.
+
+Please report any issues you find.
+
+To use it just grab the ro/thehunters/digi/recipeUtil/RecipeUtil.java class and place it in your own plugin, then use it statically!
+
+Example:
+
+if(RecipeUtil.areEqual(recipe, otherRecipe))
+{
+    // ...
+}
+
+
+Methods have JavaDoc, read those for more information.
