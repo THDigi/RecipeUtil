@@ -1,4 +1,4 @@
-package ro.thehunters.digi.testing;
+package ro.thehunters.digi.recipeUtil.testing;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;

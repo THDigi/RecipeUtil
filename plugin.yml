@@ -2,7 +2,7 @@ name: RecipeUtil Testing
 description: Testing RecipeUtil class
 version: 1.0
 author: Digi
-main: ro.thehunters.digi.testing.Testing
+main: ro.thehunters.digi.recipeUtil.testing.Testing
 commands:
   test:
     description: test
