@@ -96,7 +96,9 @@ public class RecipeUtil
             
             if(!Arrays.equals(matrix1, matrix2)) // compare arrays and if they don't match run another check with one shape mirrored.
             {
-                return Arrays.equals(mirrorMatrix(matrix1), matrix2);
+                mirrorMatrix(matrix1);
+                
+                return Arrays.equals(matrix1, matrix2);
             }
             
             return true; // ingredients match.
@@ -167,15 +169,17 @@ public class RecipeUtil
         return matrix;
     }
     
-    private static ItemStack[] mirrorMatrix(ItemStack[] matrix)
+    private static void mirrorMatrix(ItemStack[] matrix)
     {
-        ItemStack[] m = new ItemStack[9];
+        ItemStack tmp;
         
         for(int r = 0; r < 3; r++)
         {
-            m[(r * 3)] = matrix[(r * 3) + 2];
-            m[(r * 3) + 1] = matrix[(r * 3) + 1];
-            m[(r * 3) + 2] = matrix[(r * 3)];
+            tmp = matrix[(r * 3)];
+            matrix[(r * 3)] = matrix[(r * 3) + 2];
+            matrix[(r * 3) + 2] = tmp;
+        }
+    }
         }
         
         return m;
