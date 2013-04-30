@@ -14,7 +14,7 @@ import org.bukkit.inventory.ShapelessRecipe;
  * Utility class to compare Bukkit recipes.<br>
  * Useful for identifying your recipes in events, where recipes are re-generated in a diferent manner.
  * 
- * @version R1
+ * @version R1.1
  * @author Digi
  */
 public class RecipeUtil
@@ -139,7 +139,8 @@ public class RecipeUtil
             FurnaceRecipe r1 = (FurnaceRecipe)recipe1;
             FurnaceRecipe r2 = (FurnaceRecipe)recipe2;
             
-            return (r1.getInput().equals(r2.getInput())); // just compare ingredient.
+            //return (r1.getInput().equals(r2.getInput())); // TODO use this when furnace data PR is pulled
+            return r1.getInput().getTypeId() == r2.getInput().getTypeId();
         }
         else
         {
