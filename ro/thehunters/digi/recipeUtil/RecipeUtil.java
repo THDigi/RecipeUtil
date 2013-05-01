@@ -14,7 +14,7 @@ import org.bukkit.inventory.ShapelessRecipe;
  * Utility class to compare Bukkit recipes.<br>
  * Useful for identifying your recipes in events, where recipes are re-generated in a diferent manner.
  * 
- * @version R1.1
+ * @version R1.2
  * @author Digi
  */
 public class RecipeUtil
