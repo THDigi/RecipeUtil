@@ -20,6 +20,12 @@ import org.bukkit.inventory.ShapelessRecipe;
 public class RecipeUtil
 {
     /**
+     * The wildcard data value for ingredients.<br>
+     * If this is used as data value on an ingredient it will accept any data value.
+     */
+    public static final short DATA_WILDCARD = Short.MAX_VALUE;
+    
+    /**
      * Checks if both recipes are equal.<br>
      * Compares both ingredients and results.<br>
      * <br>
@@ -113,6 +119,7 @@ public class RecipeUtil
             ShapelessRecipe r1 = (ShapelessRecipe)recipe1;
             ShapelessRecipe r2 = (ShapelessRecipe)recipe2;
             
+            // get copies of the ingredient lists
             List<ItemStack> find = r1.getIngredientList();
             List<ItemStack> compare = r2.getIngredientList();
             
